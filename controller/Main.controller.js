@@ -32,7 +32,7 @@ sap.ui.define(
     return Controller.extend("pod.controller.Main", {
       locale: navigator.language || navigator.userLanguage,
       model: new JSONModel(),
-
+      route: "ACADEMY22/GIANMARCO/RESRCE/TRANSACTION",
       onInit: function () {
         //set model
         this.getView().setModel(this.model);
@@ -46,7 +46,7 @@ sap.ui.define(
 			}*/
 
         //get data
-        //this.getSiteAndUser();
+        this.getSiteAndUser();
       },
 
       onAfterRendering: function () {
@@ -54,6 +54,11 @@ sap.ui.define(
         document.title = this.getView()
           .getModel("i18n")
           .getProperty("page.title");
+      },
+
+      onPress: function () {
+        const data = this.getDataSync("GET_SITE", this.route, {});
+        console.log(data);
       },
 
       //INITIAL FUNCTIONS//
@@ -68,7 +73,7 @@ sap.ui.define(
 
         try {
           var req = jQuery.ajax({
-            url: "/XMII/Illuminator",
+            url: "https://srvmes.icms.it/XMII/Illuminator",
             data: params,
             method: "GET",
             async: true,
@@ -181,7 +186,7 @@ sap.ui.define(
           data: input,
           dataType: "xml",
           async: false,
-          url: "/XMII/Runner",
+          url: "https://srvmes.icms.it/XMII/Runner",
           success: function (data) {
             try {
               results = eval(data.documentElement.textContent);
@@ -219,7 +224,7 @@ sap.ui.define(
 
         try {
           var req = jQuery.ajax({
-            url: "/XMII/Runner",
+            url: "https://srvmes.icms.it/XMII/Runner",
             data: input,
             method: "POST",
             dataType: "xml",
@@ -270,7 +275,7 @@ sap.ui.define(
                 type: "POST",
                 data: params,
                 async: false,
-                url: "/XMII/Illuminator",
+                url: "https://srvmes.icms.it/XMII/Illuminator",
                 success: function (data) {
                   try {
                     var urll = window.location.href;

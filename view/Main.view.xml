@@ -30,7 +30,7 @@
 			</customHeader>
 
 			<content>
-				
+				<Button text="PRESS" press="onPress"></Button>
 			</content>
 		</Page>
 

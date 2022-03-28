@@ -1,13 +1,10 @@
-<mvc:View
-	xmlns="sap.m"
+<mvc:View xmlns="sap.m"
 	xmlns:mvc="sap.ui.core.mvc"
 	xmlns:core="sap.ui.core"
 	xmlns:c="sap.ui.commons"
 	xmlns:f="sap.ui.layout.form"
 	xmlns:l="sap.ui.layout"
-	xmlns:t="sap.ui.table"
-	controllerName="pod.controller.Main"
-	displayBlock="true">
+	xmlns:t="sap.ui.table" controllerName="pod.controller.Main" displayBlock="true">
 
 	<App>
 
@@ -31,6 +28,37 @@
 
 			<content>
 				<Button text="PRESS" press="onPress"></Button>
+
+				<Table id="idProductsTable" inset="false" items="{/SITE}">
+					<headerToolbar>
+						<OverflowToolbar>
+							<content>
+								<Title text="Products" level="H2"/>
+							</content>
+						</OverflowToolbar>
+					</headerToolbar>
+					<infoToolbar>
+						<OverflowToolbar>
+							<Label text="Wide range of available products"/>
+						</OverflowToolbar>
+					</infoToolbar>
+					<columns>
+						<Column width="12em">
+							<Text text="Site" />
+						</Column>
+						<Column minScreenWidth="Tablet" demandPopin="true">
+							<Text text="Description" />
+						</Column>
+					</columns>
+					<items>
+						<ColumnListItem vAlign="Middle">
+							<cells>
+								<Text text="{SITE}"></Text>
+								<Text text="{DESCRIPTION}"></Text>
+							</cells>
+						</ColumnListItem>
+					</items>
+				</Table>
 			</content>
 		</Page>
 

@@ -58,7 +58,7 @@ sap.ui.define(
 
       onPress: function () {
         const data = this.getDataSync("GET_SITE", this.route, {});
-        console.log(data);
+        this.model.setProperty("/SITE", data);
       },
 
       //INITIAL FUNCTIONS//

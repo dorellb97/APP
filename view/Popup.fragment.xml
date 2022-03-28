@@ -1,0 +1,26 @@
+<core:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:core="sap.ui.core"
+	xmlns:c="sap.ui.commons"
+	xmlns:f="sap.ui.layout.form"
+	xmlns:l="sap.ui.layout"
+	xmlns:t="sap.ui.table"
+	controllerName="pod.controller.Main">
+
+	<Dialog
+		title="POPUP"
+		contentWidth="70%"
+		contentHeight="70%"
+		class="sapUiContentPadding">
+		<content>
+
+		</content>
+
+		<buttons>
+			<Button icon="sap-icon://undo" tooltip="{i18n>popup.close}" press="" type="Reject" class="halfSizeButton"/>
+			<Button icon="sap-icon://accept" tooltip="{i18n>popup.save}" press="" type="Accept" class="halfSizeButton"/>
+		</buttons>
+	</Dialog>
+
+</core:FragmentDefinition>

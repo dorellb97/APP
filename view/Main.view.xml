@@ -1,0 +1,39 @@
+<mvc:View
+	xmlns="sap.m"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:core="sap.ui.core"
+	xmlns:c="sap.ui.commons"
+	xmlns:f="sap.ui.layout.form"
+	xmlns:l="sap.ui.layout"
+	xmlns:t="sap.ui.table"
+	controllerName="pod.controller.Main"
+	displayBlock="true">
+
+	<App>
+
+		<Page title="{i18n>page.title}" class="sapUiContentPadding" enableScrolling="false">
+			<customHeader>
+				<Bar>
+					<contentLeft>
+						<Button icon="sap-icon://nav-back" press="onNavBack" tooltip="{i18n>page.back}"/>
+					</contentLeft>
+
+					<contentMiddle>
+						<Title text="{i18n>page.title}" level="H1" class="titleText"/>
+					</contentMiddle>
+
+					<contentRight>
+						<Text text="{/username}" class="sapUiTinyMarginEnd"/>
+						<Button icon="sap-icon://log" tooltip="{i18n>page.logout}" press="onLogout"/>
+					</contentRight>
+				</Bar>
+			</customHeader>
+
+			<content>
+				
+			</content>
+		</Page>
+
+	</App>
+
+</mvc:View>

@@ -89,16 +89,16 @@ sap.ui.define(
         this.user = user;
         this.model.setProperty("/username", username.toUpperCase());
 
-        if (!this.site) {
-          location.reload(true);
-        }
+        // if (!this.site) {
+        //   location.reload(true);
+        // }
 
         //get data
         /*this.getInfo();*/
       },
 
       loginError: function (error) {
-        location.reload(true);
+        // location.reload(true);
       },
 
       //DATA FUNCTIONS//
